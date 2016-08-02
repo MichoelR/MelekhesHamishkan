@@ -1,0 +1,212 @@
+mkrmm	; mkr 03/14/2014: Meleches Hamishkan
+	;
+	;
+outhtml	;
+	;
+	n ccnt,cnums,file1,file2,file3,file5,glb0,glb1,glb2,glb3,glb4,glb5,glb6
+	n onums,parshas,path,peh,perek,samech,vav,words
+	; First read in section and phrase globals
+	k ^UTILITY($j)
+	s glb1="^UTILITY("_$j_",""insection""",glb2="^UTILITY("_$j_",""inphrase"""
+	s glb3="^UTILITY("_$j_",""colinit"""
+	s glb4="^UTILITY("_$j_",""section"")",glb5="^UTILITY("_$j_",""phrase"")" ; handy internal structures
+	s glb6="^UTILITY("_$j_",""jsinit"""
+	s glb0="^UTILITY("_$j_",""out""" ; html output
+	s path="\\pathology27\CharlesStreet\SMILE\Shared\Auto-SMILE\MKR\MM\"
+	s file1="mmsection.csv",file2="mmphrase.csv",file0="mminit.xml",file3="mmcolinit.xml"
+	d READ^%zHOSTNT(path_file1,glb1_",") s glb1=glb1_")"
+	d READ^%zHOSTNT(path_file2,glb2_",") s glb2=glb2_")"
+	d READ^%zHOSTNT(path_file0,glb0_",") s glb0=glb0_")" ; initial section of output
+	s @glb0@(0)=@glb0,@glb0="" ; keep line count in zero node
+	d READ^%zHOSTNT(path_file3,glb3_",") s glb3=glb3_")"
+	;
+	; load some other helpful arrays
+	m cnums=^mkr2("cnums") ; convert to and from Hebrew numbers, up to 50.
+	m onums=^mkr2("onums") ; ordinal numbers (for aliyos)
+	m words=^mkr2("wrds") ; some helpful words in Hebrew (easier not to use Hebrew in the code here)
+	f w="parshas","perekw","samech","peh","vav" s @w=words(w)
+	d ldsectionphrase	; organize M globals for section & phrase data
+	;
+	f ccnt=1,2 d outhtml1 ; each of the two columns
+	;
+	d ldjavascript	; javascript
+	d close	; closing tags
+	;
+	k ^mkr2("mm") m ^mkr2("mm")=^UTILITY($j) ; DEBUGGING
+	; Write out completed html
+	s file5="Meleches Hamishkan.htm"
+	d OPEN^%zHFSRVR(path_file5,"mmwrt^mkrmm","W")
+	;
+	k ^UTILITY($j)
+	q
+	;
+outhtml1	; one column
+	n aliyah,perek,perekH,sedra,sefer,sord
+	; first add initial html
+	d addGlbOut(glb3) ; rest of initial html
+	;
+	s (aliyah,perekH,sedra,sefer,sord)="" ; running values
+	; now add sections in order. scnt is sort order
+	s sord="" f  s sord=$o(@glb4@(sord)) q:'sord  d outhtml2
+	;
+	d addO("</div>")
+	d addO("</div> <!-- end col"_ccnt_" -->")
+	q
+	;
+outhtml2	; one section
+	n pord,sectphrases,sect,sectid,x
+	; glb4 is temp array for sections, glb5 is temp array for phrases, loaded above
+	s sectid=sord
+	m sect=@glb4@(sectid)
+	m sectphrases=sect("phrases") ; phrases within that section
+	i sect("sefer")'="" d
+	. s sefer=sect("sefer") ; running value
+	i sedra'=sect("sedra") d
+	. s sedra=sect("sedra")
+	. d addO("<div style='font-size:large;font-weight:bold'>"_words("parshas")_" "_sedra_"</div>")
+	;
+	s x="<div id='s"_sectid_"_"_ccnt_"' name='"_sect("desc")_"' class='col"_ccnt_" section noselected'>" d addO(x)
+	; add phrases in order
+	s pord="" f  s pord=$o(sectphrases(pord)) q:'pord  d outhtml3 ; pord is sort order
+	;
+	d addO("</div>")
+	q
+	;
+outhtml3	; one phrase
+	n aliyah2,br,maftir,phrase,phraseid,tabindex,text
+	s phraseid=pord
+	s tabindex=((ccnt-1)*10000)+phraseid ; allow tabbing through first one column, then the other
+	m phrase=@glb5@(phraseid)
+	;
+	s aliyah2=phrase("aliyah")
+	i aliyah2'="",aliyah'=aliyah2 d
+	. s aliyah=aliyah2
+	. d addO("<div>["_aliyah_"]</div>")
+	i phrase("maftir")'="" d
+	. s maftir=phrase("maftir")
+	. d addO("<div>["_maftir_"]</div>")
+	i perekH'=phrase("perekH") d
+	. s perekH=phrase("perekH")
+	. d addO("<b>"_words("perekw")_" "_perekH_"</b>")
+	s x="<span id='p"_phraseid_"_"_ccnt_"' tabindex='"_tabindex_"' class='col"_ccnt_" phrase phrasenoselected "_phrase("class")_"'>" d addO(x)
+	i phrase("pieceno")<2 d addO(phrase("posukH"))
+	s text=phrase("text")
+	i $g(phrase("endf")) s text=text_"."
+	; this last is a transparent color. The only purpose is to help keep final .s from
+	;  being rendered on the wrong side of the sentence...
+	s text=text_"<span style='color:transparent'>"_vav_"</span>" ; end of verse
+	d addO(text)
+	d addO("</span>")
+	s br=phrase("break") i br'="" d  ; psuchah, stumah
+	. i $l(br)>2 s br="<div>"_br_"</div>" ; end of sedra
+	. d addO(br) ; add psuchah or stumah
+	q
+	;
+ldsectionphrase	; organize M arrays for section & phrase data
+	; section is in glb1=^UTILITY($j,"insection",1:N), phrase glb2=^UTILITY($j,"inphrase",1:N)
+	; these have header rows, then tab-delimited text
+	; we'll output glb4 and glb5, ^UTILITY($j,"section",id#,) and ^UTILITY($j,"phrase",id#,)
+	;  with various info stored below
+	n aliyah,altidno,break,class,cmt,desc,idno,maftir,pcnt,perek,phrase
+	n pieceno,posuk,posukH,previdno,scnt,section,sectidno,sedra,sefer,text,toidno,type
+	s t=$c(9)
+	f scnt=2:1:@glb1 d
+	. s x=@glb1@(scnt),idno=$p(x,t),desc=$p(x,t,2),toidno=$p(x,t,3),altidno=$p(x,t,4)
+	. s aliyah=$p(x,t,6),sedra=$p(x,t,7),sefer=$p(x,t,8),cmt=$p(x,t,9)
+	. s aliyah=onums(aliyah)
+	. k section
+	. f y="desc","toidno","altidno","aliyah","sedra","sefer","cmt" s section(y)=@y
+	. m @glb4@(idno)=section
+	f pcnt=2:1:@glb2 d
+	. s x=@glb2@(pcnt),idno=$p(x,t),sectidno=$p(x,t,2),toidno=$p(x,t,3),perek=$p(x,t,4)
+	. s posuk=$p(x,t,5),pieceno=$p(x,t,6),text=$p(x,t,7)
+	. s break=$p(x,t,8),type=$p(x,t,9),aliyah=$p(x,t,10),maftir=$p(x,t,11),cmt=$p(x,t,12)
+	. s:pieceno="" pieceno=1
+	. s:type="" type=1
+	. s posukH=cnums(posuk) ; convert to Hebrew
+	. s perekH=cnums(perek) ; convert to Hebrew
+	. s class=$s('toidno:"no-to",type=1:"main",type=2:"alt",type=3:"none",1:"")
+	. k phrase
+	. f y="sectidno","toidno","perekH","posukH","pieceno","aliyah","cmt","text","break","maftir","type","class" s phrase(y)=@y
+	. m @glb5@(idno)=phrase
+	. s @glb4@(sectidno,"phrases",idno)="" ; index of phrases in section
+	.; also add period at end of previous verse
+	. i pieceno=1 s previdno=$o(@glb5@(idno),-1) i previdno s @glb5@(previdno,"endf")=1
+	q
+	;
+ldjavascript	; load javascript at end of html
+	n fld,pcnt,phraseid,scnt,sectid,txt,val
+	;d addGlbOut(glb6) ; initial section of javascript - the code
+	; now add js objects to hold links between sections and phrases
+	d addO("<script>")
+	d addO("metasection = new Array(); // global array")
+	s sectid="" f scnt=0:1 s sectid=$o(@glb4@(sectid)) q:sectid=""  d
+	. s txt="metasection["_sectid_"] = {"
+	. f fld="aliyah","altidno","cmt","desc","sedra","sefer","toidno" d
+	.. s val=@glb4@(sectid,fld)
+	.. s txt=txt_fld_":'"_val_"',"
+	. d addO(txt)
+	.; now add array of phrases in that section
+	. s txt="  phrases:[ "
+	. i '$d(@glb4@(sectid,"phrases")) w !,"--No phrases for section --"_sectid,! q  ; error
+	. s phraseid="" f  s phraseid=$o(@glb4@(sectid,"phrases",phraseid)) q:phraseid=""  d
+	.. s txt=txt_phraseid_","
+	. s $e(txt,$l(txt))=" ] };"
+	. d addO(txt)
+	d addO("sections = [")
+	s sectid="" f  s sectid=$o(@glb4@(sectid)) q:sectid=""  d addO(sectid_",")
+	d addO("];")
+	d addO("metaphrase = new Array(); // global array")
+	s phraseid="" f pcnt=0:1 s phraseid=$o(@glb5@(phraseid)) q:phraseid=""  d
+	. s txt="metaphrase["_phraseid_"] = {"
+	. f fld="aliyah","break","class","cmt","maftir","perekH","pieceno","posukH","sectidno","toidno","type" d
+	.. s val=@glb5@(phraseid,fld)
+	.. s txt=txt_fld_":'"_val_"',"
+	. s txt=txt_"index:"_pcnt_"};"
+	. d addO(txt)
+	d addO("phrases = [")
+	s phraseid="" f  s phraseid=$o(@glb5@(phraseid)) q:phraseid=""  d addO(phraseid_",")
+	d addO("];")
+	d addO("</script>")
+	d addO("<script src='includes/mm.js'></script>")
+	;
+	q
+	;
+close	; closing tags
+	d addO("</body>"),addO("</html>")
+	q
+	;
+add(glb,elt,text,attr) ; add to global for xml
+	; attr nodes should be set up already, attr(1:N,"name"),attr(1:N,"value")
+	d add1^zMXMLUTL(glb,elt,$g(text),.attr)
+	q
+	;
+addDown(glb) ; move down one level for xml - at last node
+	q $$addDown^zMXMLUTL(glb)
+	;
+addGlbOut(glb)	; add all of input global to end of output global
+	; allows ##var## replacement
+	n cnt,nlines,x,x1,x2,x3
+	s nlines=$g(@glb@(0))
+	s:'nlines nlines=$o(@glb@(""),-1)
+	f cnt=1:1:nlines d
+	. s x=@glb@(cnt)
+	. f  q:x'["##"  d  ; replace meta-variables, assumed in local symbol table
+	.. s x1=$p(x,"##"),x2=$p(x,"##",2),x3=$p(x,"##",3) ; variable name in middle
+	.. s x=x1_@x2_x3 ; replace with actual value
+	. d addO(x)
+	q
+	;
+addO(txt)	; add to output global glb0
+	n cnt
+	s (cnt,@glb0@(0))=$g(@glb0@(0))+1
+	s @glb0@(cnt)=txt
+	q
+	;
+mmwrt	; write out html
+	n cnt
+	f cnt=1:1:@glb0@(0) d
+	. w !,@glb0@(cnt)
+	q
+	;
+ 

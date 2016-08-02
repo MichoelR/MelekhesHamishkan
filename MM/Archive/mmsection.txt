@@ -1,0 +1,160 @@
+id#	description	tosectionid#	altsectionid#	chptr range	aliyah	sedra	sefer	comments
+10	materials-command	830		26	1	תרומה	שמות	
+20	mishkan-extra	1460			1	תרומה	שמות	
+30	aron-command	930			1	תרומה	שמות	
+40	badim-position-command	1320			1	תרומה	שמות	
+50	edos-position-command	1310			1	תרומה	שמות	
+60	kapores-command	940			2	תרומה	שמות	
+70	kapores-position-command	1330			2	תרומה	שמות	
+80	edos-position-command2				2	תרומה	שמות	
+90	aron-usage				2	תרומה	שמות	
+100	shulchan-command	950			2	תרומה	שמות	
+110	shulchan-usage				2	תרומה	שמות	
+120	menorah-command	960			3	תרומה	שמות	
+130	menorah-usage	1380			3	תרומה	שמות	
+140	menorah-command2	960			3	תרומה	שמות	
+150	menorah-extra				3	תרומה	שמות	
+160	mishkan-command	880			3	תרומה	שמות	
+170	ohel-command	890			3	תרומה	שמות	
+180	kerashim-command	900			4	תרומה	שמות	
+190	mishkan-extra2	1460			4	תרומה	שמות	
+200	paroches-command	910			5	תרומה	שמות	
+210	paroches-position-command	1340			5	תרומה	שמות	
+220	kapores-position-command2	1330			5	תרומה	שמות	
+230	shulchan-position-command	1350			5	תרומה	שמות	
+240	menorah-position-command	1370			5	תרומה	שמות	
+250	shulchan-position-command2	1350			5	תרומה	שמות	
+260	masach-command	920			5	תרומה	שמות	
+270	mizbeach-command	1000		27	6	תרומה	שמות	
+280	mizbeach-extra				6	תרומה	שמות	
+290	chatzer-command	1020			7	תרומה	שמות	
+300	chatzer-command2	1030			7	תרומה	שמות	
+310	oil-bring-command				1	תצוה	שמות	
+320	cohanim-bring-command				1	תצוה	שמות	
+330	clothing-general-command	1050			1	תצוה	שמות	
+340	ephod-command	1060			1	תצוה	שמות	
+350	ephod-command2	1070			1	תצוה	שמות	
+360	ephod-command3	1080			1	תצוה	שמות	
+370	ephod-command4	1090			1	תצוה	שמות	
+380	ephod-command5	1100			1	תצוה	שמות	
+390	ephod-usage				1	תצוה	שמות	
+400	ephod-command6				2	תצוה	שמות	
+410	choshen-command	1110			2	תצוה	שמות	
+420	choshen-command2	1120			2	תצוה	שמות	
+430	choshen-usage				2	תצוה	שמות	
+440	meil-command	1130			3	תצוה	שמות	
+450	meil-usage				3	תצוה	שמות	
+460	tzitz-command	1150			3	תצוה	שמות	
+470	tzitz-usage				3	תצוה	שמות	
+480	clothing-other-command	1140			3	תצוה	שמות	
+490	clothing-other-usage				3	תצוה	שמות	
+500	michnosayim-command				3	תצוה	שמות	
+510	michnosayim-usage				3	תצוה	שמות	
+520	miluim-command	1470			4	תצוה	שמות	
+530	miluim-command2	1480			4	תצוה	שמות	
+540	miluim-command3	1490			4	תצוה	שמות	
+550	miluim-command4	1500			4	תצוה	שמות	
+560	miluim-command5	1510			4	תצוה	שמות	
+570	miluim-command6	1520			4	תצוה	שמות	
+580	miluim-command7	1530			5	תצוה	שמות	
+590	miluim-command8	1550			5	תצוה	שמות	
+600	miluim-command9	1540			5	תצוה	שמות	
+610	miluim-command10				5	תצוה	שמות	
+620	miluim-command11				5	תצוה	שמות	
+630	miluim-command12	1560			5	תצוה	שמות	
+640	miluim-command13	1570			5	תצוה	שמות	
+650	miluim-command14				5	תצוה	שמות	
+660	miluim-mizbeach-usage				6	תצוה	שמות	
+670	mizbach-ketores-command	970			7	תצוה	שמות	
+680	mizbach-ketores-position-command				7	תצוה	שמות	
+690	mizbach-ketores-usage				7	תצוה	שמות	
+700	half-shekel-command	1580			1	כי תשא	שמות	
+710	kior-command	1010			1	כי תשא	שמות	
+720	kior-position-command	1430			1	כי תשא	שמות	
+730	kior-usage	1440			1	כי תשא	שמות	
+740	anointing-oil-command	980			1	כי תשא	שמות	
+750	anointing-oil-usage	800			1	כי תשא	שמות	
+760	anointing-oil-usage2				1	כי תשא	שמות	
+770	anointing-oil-usage3				1	כי תשא	שמות	
+780	ketores-command	990			1	כי תשא	שמות	
+790	betzalel-command	860			1	כי תשא	שמות	
+800	betzalel-usage	840			1	כי תשא	שמות	
+810	shabbos-command	820			1	כי תשא	שמות	
+820	shabbos-command2	810		35	1	ויקהל	שמות	
+830	materials-command2	10			1	ויקהל	שמות	
+840	craftsmanship-command	1170			1	ויקהל	שמות	
+850	materials-action				2	ויקהל	שמות	
+860	betzalel-command2	790			3	ויקהל	שמות	
+870	materials-action2				3	ויקהל	שמות	
+880	mishkan-action	160			4	ויקהל	שמות	
+890	ohel-action	170			4	ויקהל	שמות	
+900	kerashim-action	180			5	ויקהל	שמות	
+910	paroches-action	200			5	ויקהל	שמות	
+920	masach-action	260			5	ויקהל	שמות	
+930	aron-action	30			5	ויקהל	שמות	
+940	kapores-action	60			5	ויקהל	שמות	
+950	shulchan-action	100			5	ויקהל	שמות	
+960	menorah-action	120			6	ויקהל	שמות	
+970	mizbach-ketores-action	670			6	ויקהל	שמות	
+980	anointing-oil-action	740			6	ויקהל	שמות	
+990	ketores-action	780			6	ויקהל	שמות	
+1000	mizbeach-action	270		38	7	ויקהל	שמות	
+1010	kior-action	710			7	ויקהל	שמות	
+1020	chatzer-action	290			7	ויקהל	שמות	
+1030	chatzer-action2	300			7	ויקהל	שמות	
+1040	material-amounts				1	פקודי	שמות	
+1050	clothing-general-action	330			1	פקודי	שמות	
+1060	ephod-action	340			2	פקודי	שמות	
+1070	ephod-action2	350			2	פקודי	שמות	
+1080	ephod-action3	360			2	פקודי	שמות	
+1090	ephod-action4	370			2	פקודי	שמות	
+1100	ephod-action5	380			2	פקודי	שמות	
+1110	choshen-action	410			2	פקודי	שמות	
+1120	choshen-action2	420			2	פקודי	שמות	
+1130	meil-action	440			3	פקודי	שמות	
+1140	clothing-other-action	480			3	פקודי	שמות	
+1150	tzitz-action	460			3	פקודי	שמות	
+1160	summary				3	פקודי	שמות	
+1170	materials-delivery	840			4	פקודי	שמות	
+1180	summary2				4	פקודי	שמות	
+1190	mishkan-building-command	1300		40	5	פקודי	שמות	
+1200	aron-building-command	1310			5	פקודי	שמות	
+1210	paroches-building-command	1340			5	פקודי	שמות	
+1220	shulchan-building-command	1360			5	פקודי	שמות	
+1230	menorah-building-command	1380			5	פקודי	שמות	
+1240	mizbach-ketores-building-command	1400			5	פקודי	שמות	
+1250	masach-building-command	1410			5	פקודי	שמות	
+1260	mizbeach-building-command	1420			5	פקודי	שמות	
+1270	kior-building-command	1430			5	פקודי	שמות	
+1280	chatzer-building-command	1450			5	פקודי	שמות	
+1290	meshicha-command	1590			5	פקודי	שמות	
+1300	mishkan-building-action	1190			6	פקודי	שמות	
+1310	edos-position-action	50			6	פקודי	שמות	
+1320	badim-position-action	40			6	פקודי	שמות	
+1330	kapores-position-action	70			6	פקודי	שמות	
+1340	paroches-position-action	210			6	פקודי	שמות	
+1350	shulchan-position-action	230			6	פקודי	שמות	
+1360	shulchan-usage-action	110			6	פקודי	שמות	
+1370	menorah-position-action	240			6	פקודי	שמות	
+1380	menorah-usage-action	130			6	פקודי	שמות	
+1390	mizbach-ketores-position-action	680			6	פקודי	שמות	
+1400	mizbach-ketores-usage-action	690			6	פקודי	שמות	
+1410	masach-position-action	1250			7	פקודי	שמות	
+1420	mizbeach-building-action	1260			7	פקודי	שמות	
+1430	kior-building-action	1270			7	פקודי	שמות	
+1440	kior-usage-action	730			7	פקודי	שמות	
+1450	chatzer-building-action	1280			7	פקודי	שמות	
+1460	summary3	20			7	פקודי	שמות	
+1470	miluim-action	520		8	4	צו	ויקרא	
+1480	miluim-action2	530			4	צו	ויקרא	
+1490	miluim-action3	540			4	צו	ויקרא	
+1500	miluim-action4	550			4	צו	ויקרא	
+1510	miluim-action5	560			5	צו	ויקרא	
+1520	miluim-action6	570			5	צו	ויקרא	
+1530	miluim-action7	580			6	צו	ויקרא	
+1540	miluim-action8	600			6	צו	ויקרא	
+1550	miluim-action9	590			7	צו	ויקרא	
+1560	miluim-action10	630			7	צו	ויקרא	
+1570	miluim-action11	640			7	צו	ויקרא	
+1580	half-shekel-action			1	1	נשא	במדבר	
+1590	meshicha-action	1290		7	5	נשא	במדבר	

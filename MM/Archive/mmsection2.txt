@@ -1,0 +1,160 @@
+id#	description	tosectionid	tosection	altsectionid	altsection	chptr range	posuk lo	posuk hi	aliyah range	sedra	comments
+10	materials-command	830	materials-command2			26	1	7	1	תרומה	
+20	mishkan-extra	1460	summary3				8	9	1	תרומה	
+30	aron-command	930	aron-action				10	14	1	תרומה	
+40	badim-position-command	1320	badim-position-action				15	15	1	תרומה	
+50	edos-position-command	1310	edos-position-action				16	16	1	תרומה	
+60	kapores-command	940	kapores-action				17	20	2	תרומה	
+70	kapores-position-command	1330	kapores-position-action				21	21	2	תרומה	
+80	edos-position-command2								2	תרומה	
+90	aron-usage						22	22	2	תרומה	
+100	shulchan-command	950	shulchan-action				23	29	2	תרומה	
+110	shulchan-usage						30	30	2	תרומה	
+120	menorah-command	960	menorah-action				32	37	3	תרומה	
+130	menorah-usage	1380	menorah-usage-action						3	תרומה	
+140	menorah-command2	960	menorah-action				38	39	3	תרומה	
+150	menorah-extra						40	40	3	תרומה	
+160	mishkan-command	880	mishkan-action				2	6	3	תרומה	
+170	ohel-command	890	ohel-action				7	14	3	תרומה	
+180	kerashim-command	900	kerashim-action				16	29	4	תרומה	
+190	mishkan-extra2	1460	summary3				30	30	4	תרומה	
+200	paroches-command	910	paroches-action				32	32	5	תרומה	
+210	paroches-position-command	1340	paroches-position-action				33	33	5	תרומה	
+220	kapores-position-command2	1330	kapores-position-action				34	34	5	תרומה	
+230	shulchan-position-command	1350	shulchan-position-action				35	35	5	תרומה	
+240	menorah-position-command	1370	menorah-position-action						5	תרומה	
+250	shulchan-position-command2	1350	shulchan-position-action						5	תרומה	
+260	masach-command	920	masach-action				36	37	5	תרומה	
+270	mizbeach-command	1000	mizbeach-action			27	2	8	6	תרומה	
+280	mizbeach-extra								6	תרומה	
+290	chatzer-command	1020	chatzer-action				10	15	7	תרומה	
+300	chatzer-command2	1030	chatzer-action2				16	19	7	תרומה	
+310	oil-bring-command						20	21	1	תצוה	
+320	cohanim-bring-command								1	תצוה	
+330	clothing-general-command	1050	clothing-general-action				2	5	1	תצוה	
+340	ephod-command	1060	ephod-action				6	6	1	תצוה	
+350	ephod-command2	1070	ephod-action2						1	תצוה	
+360	ephod-command3	1080	ephod-action3				7	8	1	תצוה	
+370	ephod-command4	1090	ephod-action4				10	11	1	תצוה	
+380	ephod-command5	1100	ephod-action5				12	12	1	תצוה	
+390	ephod-usage								1	תצוה	
+400	ephod-command6						14	14	2	תצוה	
+410	choshen-command	1110	choshen-action				15	28	2	תצוה	
+420	choshen-command2	1120	choshen-action2						2	תצוה	
+430	choshen-usage						29	30	2	תצוה	
+440	meil-command	1130	meil-action				32	34	3	תצוה	
+450	meil-usage						35	35	3	תצוה	
+460	tzitz-command	1150	tzitz-action				36	37	3	תצוה	
+470	tzitz-usage								3	תצוה	
+480	clothing-other-command	1140	clothing-other-action				39	40	3	תצוה	
+490	clothing-other-usage						41	41	3	תצוה	
+500	michnosayim-command						42	42	3	תצוה	
+510	michnosayim-usage						43	43	3	תצוה	
+520	miluim-command	1470	miluim-action				2	3	4	תצוה	
+530	miluim-command2	1480	miluim-action2				4	6	4	תצוה	
+540	miluim-command3	1490	miluim-action3				7	7	4	תצוה	
+550	miluim-command4	1500	miluim-action4				8	9	4	תצוה	
+560	miluim-command5	1510	miluim-action5				10	14	4	תצוה	
+570	miluim-command6	1520	miluim-action6				15	18	4	תצוה	
+580	miluim-command7	1530	miluim-action7				20	20	5	תצוה	
+590	miluim-command8	1550	miluim-action9				21	21	5	תצוה	
+600	miluim-command9	1540	miluim-action8				22	26	5	תצוה	
+610	miluim-command10						27	29	5	תצוה	
+620	miluim-command11						30	30	5	תצוה	
+630	miluim-command12	1560	miluim-action10				31	34	5	תצוה	
+640	miluim-command13	1570	miluim-action11				35	35	5	תצוה	
+650	miluim-command14						36	37	5	תצוה	
+660	miluim-mizbeach-usage						39	46	6	תצוה	
+670	mizbach-ketores-command	970	mizbach-ketores-action				2	5	7	תצוה	
+680	mizbach-ketores-position-command		mizbach-ketores-building				6	6	7	תצוה	
+690	mizbach-ketores-usage						7	10	7	תצוה	
+700	half-shekel-command	1580	half-shekel-action				11	16	1	כי תשא	
+710	kior-command	1010	kior-action				17	18	1	כי תשא	
+720	kior-position-command	1430	kior-building-action						1	כי תשא	
+730	kior-usage	1440	kior-usage-action				19	21	1	כי תשא	
+740	anointing-oil-command	980	anointing-oil-action				22	25	1	כי תשא	
+750	anointing-oil-usage	800	betzalel-usage				26	29	1	כי תשא	
+760	anointing-oil-usage2						30	30	1	כי תשא	
+770	anointing-oil-usage3						31	33	1	כי תשא	
+780	ketores-command	990	ketores-action				34	38	1	כי תשא	
+790	betzalel-command	860	betzalel-command2				2	6	1	כי תשא	
+800	betzalel-usage	840	craftsmanship-command				7	11	1	כי תשא	
+810	shabbos-command	820	shabbos-command2				12	17	1	כי תשא	
+820	shabbos-command2	810	shabbos-command			35	1	3	1	ויקהל	
+830	materials-command2	10	materials-command				4	9	1	ויקהל	
+840	craftsmanship-command	1170	materials-delivery				10	19	1	ויקהל	
+850	materials-action						20	29	2	ויקהל	
+860	betzalel-command2	790	betzalel-command				31	35	3	ויקהל	
+870	materials-action2						2	7	3	ויקהל	
+880	mishkan-action	160	mishkan-command				9	13	4	ויקהל	
+890	ohel-action	170	ohel-command				14	19	4	ויקהל	
+900	kerashim-action	180	kerashim-command				21	34	5	ויקהל	
+910	paroches-action	200	paroches-command				35	36	5	ויקהל	
+920	masach-action	260	masach-command				37	38	5	ויקהל	
+930	aron-action	30	aron-command				2	5	5	ויקהל	
+940	kapores-action	60	kapores-command				6	9	5	ויקהל	
+950	shulchan-action	100	shulchan-command				10	16	5	ויקהל	
+960	menorah-action	120	menorah-command				18	24	6	ויקהל	
+970	mizbach-ketores-action	670	mizbach-ketores-command				25	28	6	ויקהל	
+980	anointing-oil-action	740	anointing-oil-command				29	29	6	ויקהל	
+990	ketores-action	780	ketores-command						6	ויקהל	
+1000	mizbeach-action	270	mizbeach-command			38	1	7	7	ויקהל	
+1010	kior-action	710	kior-command				8	8	7	ויקהל	
+1020	chatzer-action	290	chatzer-command				9	15	7	ויקהל	
+1030	chatzer-action2	300	chatzer-command2				16	20	7	ויקהל	
+1040	material-amounts						21	31	1	פקודי	
+1050	clothing-general-action	330	clothing-general-command						1	פקודי	
+1060	ephod-action	340	ephod-command				2	2	2	פקודי	
+1070	ephod-action2	350	ephod-command2				3	3	2	פקודי	
+1080	ephod-action3	360	ephod-command3				4	5	2	פקודי	
+1090	ephod-action4	370	ephod-command4				6	6	2	פקודי	
+1100	ephod-action5	380	ephod-command5				7	7	2	פקודי	
+1110	choshen-action	410	choshen-command				9	21	2	פקודי	
+1120	choshen-action2	420	choshen-command2						2	פקודי	
+1130	meil-action	440	meil-command				23	26	3	פקודי	
+1140	clothing-other-action	480	clothing-other-command				27	29	3	פקודי	
+1150	tzitz-action	460	tzitz-command				31	31	3	פקודי	
+1160	summary						32	32	3	פקודי	
+1170	materials-delivery	840	craftsmanship-command				34	41	4	פקודי	
+1180	summary2						42	43	4	פקודי	
+1190	mishkan-building-command	1300	mishkan-building-action			40	2	2	5	פקודי	
+1200	aron-building-command	1310	edos-position-action				3	3	5	פקודי	
+1210	paroches-building-command	1340	paroches-position-action						5	פקודי	
+1220	shulchan-building-command	1360	shulchan-usage-action				4	4	5	פקודי	
+1230	menorah-building-command	1380	menorah-usage-action						5	פקודי	
+1240	mizbach-ketores-building-command	1400	mizbach-ketores-usage-action				5	5	5	פקודי	
+1250	masach-building-command	1410	masach-position-action						5	פקודי	
+1260	mizbeach-building-command	1420	mizbeach-building-action				6	6	5	פקודי	
+1270	kior-building-command	1430	kior-building-action				7	7	5	פקודי	
+1280	chatzer-building-command	1450	chatzer-building-action				8	8	5	פקודי	
+1290	meshicha-command	1590	meshicha-action				9	16	5	פקודי	
+1300	mishkan-building-action	1190	mishkan-building-command				17	19	6	פקודי	
+1310	edos-position-action	50	edos-position-command				20	20	6	פקודי	
+1320	badim-position-action	40	badim-position-command						6	פקודי	
+1330	kapores-position-action	70	kapores-position-command						6	פקודי	
+1340	paroches-position-action	210	paroches-position-command				21	21	6	פקודי	
+1350	shulchan-position-action	230	shulchan-position-command				22	22	6	פקודי	
+1360	shulchan-usage-action	110	shulchan-usage				23	23	6	פקודי	
+1370	menorah-position-action	240	menorah-position-command				24	24	6	פקודי	
+1380	menorah-usage-action	130	menorah-usage				25	25	6	פקודי	
+1390	mizbach-ketores-position-action	680	mizbach-ketores-position-command				26	26	6	פקודי	
+1400	mizbach-ketores-usage-action	690	mizbach-ketores-usage				27	27	6	פקודי	
+1410	masach-position-action	1250	masach-building-command						7	פקודי	
+1420	mizbeach-building-action	1260	mizbeach-building-command				29	29	7	פקודי	
+1430	kior-building-action	1270	kior-building-command				30	30	7	פקודי	
+1440	kior-usage-action	730	kior-usage				31	32	7	פקודי	
+1450	chatzer-building-action	1280	chatzer-building-command				33	33	7	פקודי	
+1460	summary3	20	mishkan-extra				35	38	7	פקודי	
+1470	miluim-action	520	miluim-command			8	1	5	4	צו	
+1480	miluim-action2	530	miluim-command2				6	9	4	צו	
+1490	miluim-action3	540	miluim-command3				10	12	4	צו	
+1500	miluim-action4	550	miluim-command4				13	13	4	צו	
+1510	miluim-action5	560	miluim-command5				15	17	5	צו	
+1520	miluim-action6	570	miluim-command6				18	21	5	צו	
+1530	miluim-action7	580	miluim-command7				23	24	6	צו	
+1540	miluim-action8	600	miluim-command9				25	29	6	צו	
+1550	miluim-action9	590	miluim-command8						7	צו	
+1560	miluim-action10	630	miluim-command12				31	32	7	צו	
+1570	miluim-action11	640	miluim-command13				34	36	7	צו	
+1580	half-shekel-action		miluim-seven-command			1	1	3	1	נשא	
+1590	meshicha-action	1290	meshicha-command			7	1	2	5	נשא	

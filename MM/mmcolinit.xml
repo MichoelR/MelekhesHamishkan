@@ -1,0 +1,14 @@
+<div style='width:50%;height:400px;float:left'> <!--one of two main column sections -->
+
+<div id="meta" style="width:20%;float:right"> <!-- right column -->
+<!-- this is where name of parsha and aliyah goes -->
+<div id="topposuk_##ccnt##" style="font-size:normal; height:150px"></div> <!-- this is where the chapter and posuk at the top goes -->
+<div id="metaparsha_##ccnt##" class="aliyah" style="font-weight:bold;font-size:x-large"> </div>
+<div id="metaaliyah_##ccnt##" class="aliyah" style="font-size:large"></div>
+<div id="bottomposuk_##ccnt##" style="position:absolute; bottom:100px; font-size:normal"></div>
+</div>
+
+<!-- now main scrollable section containing the pesukim -->
+<div id="col##ccnt##" style="overflow:auto;height:400px;width:78%;float:left;
+	border-left-style:solid;border-left-width:medium;
+	dir:ltr;text-align:right;font-family:verdana,sans-serif;font-size:large">
