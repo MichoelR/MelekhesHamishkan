@@ -17,6 +17,7 @@
 	}
 
 	function movesection() { // bring section near to top
+	return; // DEBUGGING; do without this
 		var thisid = this.id; thisid = thisid.replace("s",""); // id in form s#_#
 		var thisids = thisid.split("_");
 		var colnum = thisids[1];
